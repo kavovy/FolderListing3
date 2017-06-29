@@ -22,6 +22,7 @@ public class MViewC {
 
 	ObservableList<String> files = FXCollections.observableArrayList("Asdasdas","Asdasd","ASdasd","ASdasd");	//tak działa
 	//ObservableList<String> files = FXCollections.observableArrayList(listing.listFilesAndFolders());	//tak nie :(
+	//listing.listFilesAndFolders() zwraca obiekt typu List<String>
 	
 	@FXML
 	void initialize() {
