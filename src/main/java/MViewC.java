@@ -20,6 +20,18 @@ public class MViewC {
 		ObservableList<String> files = FXCollections.observableArrayList(listing.listFilesAndFolders());
 		listView.setItems(files);
 	}
+	
+	@FXML
+	public void onOpen(){
+		System.out.println("onOpen");
+
+	}
+	
+	@FXML
+	public void onInfo(){
+		System.out.println("onInfo");
+		
+	}
 
 	@FXML
 	void initialize() {
