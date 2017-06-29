@@ -9,25 +9,21 @@ public class MViewC {
 	private Listing listing = new Listing();
 
 	@FXML
-	TextField textField;
+	private TextField textField;
 
 	@FXML
-	ListView<String> listView;
+	private ListView<String> listView;
 
 	@FXML
 	public void onListButton() {
 		listing.setPath(textField.getText());
-		//System.out.println(listing.listFilesAndFolders() + "\n");	//works
+		ObservableList<String> files = FXCollections.observableArrayList(listing.listFilesAndFolders());
+		listView.setItems(files);
 	}
 
-	ObservableList<String> files = FXCollections.observableArrayList("Asdasdas","Asdasd","ASdasd","ASdasd");	//tak działa
-	//ObservableList<String> files = FXCollections.observableArrayList(listing.listFilesAndFolders());	//tak nie :(
-	//listing.listFilesAndFolders() zwraca obiekt typu List<String>
-	
 	@FXML
 	void initialize() {
 		textField.setText(System.getProperty("user.dir")); // current directory
-		listView.setItems(files);
 	}
 
 }
