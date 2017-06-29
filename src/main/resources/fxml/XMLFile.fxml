@@ -18,8 +18,8 @@
                <contextMenu>
                   <ContextMenu>
                     <items>
-                      <MenuItem mnemonicParsing="false" onAction="#onOpen" text="Open" />
-                        <MenuItem mnemonicParsing="false" onAction="#onInfo" text="Info" />
+                      <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#onOpen" text="Open" />
+                        <MenuItem fx:id="menuInfo" mnemonicParsing="false" onAction="#onInfo" text="Info" />
                     </items>
                   </ContextMenu>
                </contextMenu></ListView>

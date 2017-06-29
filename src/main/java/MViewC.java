@@ -1,7 +1,10 @@
+import java.io.File;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 
 public class MViewC {
@@ -20,17 +23,22 @@ public class MViewC {
 		ObservableList<String> files = FXCollections.observableArrayList(listing.listFilesAndFolders());
 		listView.setItems(files);
 	}
-	
-	@FXML
-	public void onOpen(){
-		System.out.println("onOpen");
 
-	}
-	
 	@FXML
-	public void onInfo(){
+	MenuItem menuOpen, menuInfo;
+
+	@FXML
+	public void onOpen() {
+		System.out.println("onOpen");
+		System.out.println(listView.getSelectionModel().getSelectedItem());
+		System.out.println(listView.getSelectionModel().getSelectedIndex());
+		System.out.println(listing.getFileExtension(listView.getSelectionModel().getSelectedItem()));	//extension
+	}
+
+	@FXML
+	public void onInfo() {
 		System.out.println("onInfo");
-		
+
 	}
 
 	@FXML
